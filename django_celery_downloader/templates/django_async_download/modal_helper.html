@@ -1,0 +1,25 @@
+<div
+  id="djangoAsyncDownloadModal"
+  class="modal hide fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myModalLabel"
+  aria-hidden="true">
+
+  <div class="modal-body">
+    <p>...</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>
+
+<script>
+	$(function() {
+	    $(".djangoAsyncDownloadModal-link").click(function(event) {
+	        event.preventDefault()
+	        $('#djangoAsyncDownloadModal').removeData("modal")
+	        $('#djangoAsyncDownloadModal').modal({remote: $(this).attr("href")})
+	    })
+	})
+</script>

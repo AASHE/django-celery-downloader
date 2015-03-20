@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+      media="screen">
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+
+    <title>django-celery-downloader demo</title>
+
+  </head>
+  <body>
+    <h1>django-celery-downloader demo</h1>
+
+    <a
+    class='djangoAsyncDownloadModal-link btn btn-success'
+    href="{% url report_modal 5 %}">
+      Click here to open the modal
+    </a>
+
+    {% include "django_async_download/modal_helper.html" %}
+  </body>
+</html>

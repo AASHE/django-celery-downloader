@@ -1,0 +1,50 @@
+{% comment %}
+This template is designed to be displayed within a modal, but you can roll
+your own to be a standalone page.
+{% endcomment %}
+
+<script>
+	$(document).ready(function() {
+  		$.ajaxSetup({ cache: false });
+	});
+</script>
+<div id="waiting">
+	<p style="text-align: center">
+		Please wait while your export is generated...
+	</p>
+	<hr/>
+	<div class="progress progress-striped progress-primary active" id="progressBar">
+		<div class="bar" style="width: 100%;"></div>
+	</div>
+</div>
+<div id="finished" style="display: none;">
+	<p style="text-align: center">Export Complete!</p>
+	<hr/>
+	<div style="text-align: center;">
+		<a	href="{{ download_url }}"
+			class="btn btn-success"
+			id="downloadButton">
+				Download <i class="icon-download icon-white"></i></a>
+	</div>
+
+	<script type="text/javascript">
+
+		function pollForResult(url) {
+		    $.getJSON(url, function(data) {
+		    	if(data.task.result != null) {
+						$("#waiting").hide();
+						$("#finished").show();
+		        }
+		    	else {
+		        	setTimeout(function(){
+		        		pollForResult(url);
+		        	}, 3000);
+		    	}
+		    });
+		}
+
+		setTimeout(function(){
+			pollForResult("/tasks/{{ task }}/status/");
+		}, 1000);
+	</script>
+</div>
