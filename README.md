@@ -52,7 +52,7 @@ on the page you want to trigger the download from:
       Click here to open the modal
     </a>
 
-    {% include "django_async_download/modal_helper.html" %}
+    {% include "django_celery_downloader/modal_helper.html" %}
 
 Or, if you're not using a modal, simply include a link to your
 `DownloadExportView` as described below and override the `wait_task.html`

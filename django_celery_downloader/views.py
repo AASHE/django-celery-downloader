@@ -12,7 +12,7 @@ class StartExportView(TemplateView):
 
         Requires self.export_method be defined
     """
-    template_name = "django_async_download/wait_task.html"
+    template_name = "django_celery_downloader/wait_task.html"
     download_url_name = ""
 
     def get_download_url(self, task):
