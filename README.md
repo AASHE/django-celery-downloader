@@ -9,6 +9,8 @@ Currently this includes templates that use a bootstrap2 modal and progress
 bar along with jquery to poll for the result but feel free to override those
 with your own.
 
+Useful for excel or PDF exports.
+
 ## Installation
 
 `pip install` from the repo. not on pypi, yet.
