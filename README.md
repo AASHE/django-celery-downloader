@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/AASHE/django-celery-downloader.svg?branch=master)](https://travis-ci.org/AASHE/django-celery-downloader)
+[![Code Climate](https://codeclimate.com/github/AASHE/django-celery-downloader/badges/gpa.svg)](https://codeclimate.com/github/AASHE/django-celery-downloader)
 
 # django-celery-downloader
 
