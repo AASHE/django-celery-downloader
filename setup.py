@@ -7,6 +7,7 @@ import os
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
+
 setup(
     name='django-celery-downloader',
     version='0.1',
@@ -19,7 +20,7 @@ setup(
         'django_celery_downloader',
         'django_celery_downloader.tests',
         'django_celery_downloader.tests.demo_app',
-        ],
+    ],
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
@@ -30,5 +31,5 @@ setup(
         'Framework :: Django',
     ],
     test_suite='tests.main',
-    install_requires=['Django', 'django-celery'],
+    install_requires=['Django', ],
 )
