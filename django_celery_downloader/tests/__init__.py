@@ -1,4 +1,4 @@
-from views_test import ViewsTest
+from .views_test import ViewsTest
 
 
 __test__ = {
