@@ -1,9 +1,9 @@
 import csv
-from celery.decorators import task
+from celery import shared_task
 from django.core.files.temp import NamedTemporaryFile
 
 
-@task()
+@shared_task()
 def build_report(rows):
     """
         A dummy report task. DownloadExportView expects a path to a file, so
